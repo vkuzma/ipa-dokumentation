@@ -1,0 +1,4 @@
+dokumentation.*
+!dokumentation.tex
+*lock.*.ods*
+texput.log

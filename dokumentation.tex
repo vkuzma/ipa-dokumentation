@@ -1,0 +1,209 @@
+%  --------------------------------------------------------------------------
+%  IPA Qualitätssicherung für Djangoprojekte Dokumentation
+%  Created by Vladimir Kuzma on 2012-04-30.
+%  --------------------------------------------------------------------------
+
+%  --------------------------------------------------------------------------
+%  Latex Document Settings
+%  --------------------------------------------------------------------------
+
+\documentclass[
+11pt, % Schriftgrösse
+a4paper, % A4 Papier
+BCOR10mm, % Absoluter Wert der Bindekorrektur, z.B. BCOR1cm
+DIV14, % Satzspiegel festlegen siehe
+       % http://www.ctex.org/documents/packages/nonstd/koma-script.pdf
+footsepline = false, % Trennlinie zwischen Textkörper und Fußzeile
+                     % bei normalen Seiten
+headsepline, % Trennlinie zwischen Kopfzeile und Textkörper
+             % bei normalen Seiten
+oneside, % Zweiseitig
+openright,
+halfparskip, % Europäischer Satz mit Abstand zwischen den Absätzen
+abstracton, % inkl. Abstract
+listof=totocnumbered, % Abb.- und Tab.verzeichnis im Inhaltsverzeichnis
+bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
+]{scrreprt}
+
+\usepackage[automark]{scrpage2} % Gestaltung von kopf- und Fußzeile
+\usepackage[ngerman]{babel}
+\usepackage[ngerman]{translator}
+\usepackage{tocbasic}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern} % Latin Modern
+\usepackage[T1]{fontenc}
+\usepackage{hyphenat}
+\usepackage{ae} % Schöne Schriften für PDF-Dateien
+
+% Tradmark
+\def\TTra{\textsuperscript{\texttrademark}}
+
+%1.5 Zeilenabstand
+\usepackage[onehalfspacing]{setspace}
+
+% Festlegung des Seitenstils (scrpage2)
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\automark[chapter]{section}
+
+% \lehead{\sffamily\upshape\headmark}
+% \cehead{}
+% \rehead{}
+% \lefoot[\pagemark]{\upshape \pagemark}
+% \cefoot{}
+% \refoot{}
+% \lohead{}
+% \cohead{}
+\lohead{\sffamily\upshape\headmark}
+\lofoot{}
+\cofoot[\today]{\today}
+\rofoot[\pagemark]{\scshape \pagemark}
+
+% Surround parts of graphics with box
+\usepackage{boxedminipage}
+
+% Package for including code in the document
+\usepackage{listings}
+
+% If you want to generate a toc for each chapter (use with book)
+\usepackage{minitoc}
+\usepackage{longtable}
+
+% Abkürzungsverzeichnis erstellen.
+\usepackage[printonlyused]{acronym}
+
+% schöne Tabelle zeichnen
+\usepackage{booktabs}
+\renewcommand{\arraystretch}{1.4} %Die Zeilenabstände in Tabellen angepasst.
+
+% für variable Breiten
+\usepackage{tabularx}
+
+% Durchgestrichener Text
+\usepackage[normalem]{ulem} %emphasize weiterhin kursiv
+
+% This is now the recommended way for checking for PDFLaTeX:
+\usepackage{ifpdf}
+
+\usepackage{eurosym}
+
+\usepackage{natbib}
+
+\usepackage{paralist}
+
+\usepackage{array,ragged2e}
+
+\usepackage[hyperfootnotes=false]{hyperref}
+\hypersetup{
+  bookmarks=true,         % show bookmarks bar?
+  unicode=true,           % non-Latin characters in Acrobat’s bookmarks
+  pdftoolbar=true,        % show Acrobat’s toolbar?
+  pdfmenubar=true,        % show Acrobat’s menu?
+  pdffitwindow=true,      % window fit to page when opened
+  pdfstartview={FitH},    % fits the width of the page to the window
+  pdftitle={IPA Dokumentation},   
+  pdfauthor={Marius Küng},
+  pdfsubject={Dokumentation IPA yatplaner},
+  pdfcreator={TeX Live 2009},
+  pdfproducer={pdfTeX, Version 3.1415926-1.40.10},
+  pdfnewwindow=true,      % links in new window
+  colorlinks=true,       % false: boxed links; true: colored links
+  linkcolor=black,          % color of internal links
+  citecolor=black,        % color of links to bibliography
+  filecolor=magenta,      % color of file links
+  urlcolor=cyan          % color of external links
+  % linkcolor=black,          % color of internal links
+  % citecolor=black,        % color of links to bibliography
+  % filecolor=black,      % color of file links
+  % urlcolor=black          % color of external links
+}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx}
+\else
+    \usepackage{graphicx}
+\fi
+
+\makeatletter 
+\let\orgdescriptionlabel\descriptionlabel 
+\renewcommand*{\descriptionlabel}[1]{% 
+  \let\orglabel\label 
+  \let\label\@gobble 
+  \phantomsection 
+  \edef\@currentlabel{#1}% 
+  %\edef\@currentlabelname{#1}% 
+  \let\label\orglabel 
+  \orgdescriptionlabel{#1}% 
+} 
+\makeatother 
+
+%  --------------------------------------------------------------------------
+%  Start Document
+%  --------------------------------------------------------------------------
+\title{Dokumentation IPA Qualitätssicherung für Djangoprojekte}
+
+\author{IPA in Applikationsentwicklung\\
+    \\
+    Auszubildender - Vladimir Kuzma\\
+	Auftraggeber - allink GmbH\\
+    Projektleiter - Silvan Spross\\
+    Experte - Roman Fischer\\
+    Chefexperte -  \\
+    Durchführungsort - allink GmbH\\
+	\\
+	Informatikschule ZLI }
+
+\date{30.04. - 16.05.2012}
+
+\begin{document}
+    \ifpdf
+        \DeclareGraphicsExtensions{.pdf, .jpg, .tif}
+    \else
+        \DeclareGraphicsExtensions{.eps, .jpg}
+    \fi
+
+    \pagenumbering{Alph}
+  
+    \maketitle
+
+    \pagenumbering{arabic}
+  
+    \tableofcontents
+    
+    \part{Umfeld und Ablauf}
+         \chapter{Aufgabenstellung}
+             \input{./kapitel/01_aufgabenstellung.tex}
+        \chapter{Einleitung}
+            \input{./kapitel/02_einleitung.tex}
+        \chapter{Projektplanung}
+            \input{./kapitel/03_projektplanung.tex}
+    % \part{Projekt}
+    %     \chapter{Projektbeschreibung}
+    %         \input{./kapitel/04_projektbeschreibung.tex}
+    %     \chapter{Realisierung}
+    %         \input{./kapitel/05_realisierung.tex}
+    %     \chapter{Testing}
+    %         \input{./kapitel/06_testing.tex}
+    %     \chapter{Konklusion}
+    %         \input{./kapitel/07_konklusion.tex}
+
+    
+    \appendix
+    
+    \listoffigures
+    \listoftables
+    % 
+    % \chapter{Abkürzungsverzeichnis}
+    %     \input{./kapitel/09_acronym.tex}
+    % \lstlistoflistings
+  
+    \bibliographystyle{unsrtnat}
+    \bibliography{literaturverzeichnis}
+    
+    % \chapter{Literaturverzeichnis}
+    %     \input{./kapitel/08_quellen.tex}
+    % 
+    % \chapter{Arbeitsjournal}
+    %     \input{../arbeitsjournal/arbeitsjournal.tex}
+    
+\end{document}

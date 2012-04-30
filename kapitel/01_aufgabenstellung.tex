@@ -1,0 +1,82 @@
+%!TEX root = ../dokumentation.tex
+\section{Titel der Facharbeit} 
+Kontinuierliche Qualitätssicherung für Web Projekte in Django
+    
+\section{Thematik}
+Es soll eine Software in Python erstellt werden, welche kontinuierlich die Qualität von einer konfigurierbaren Menge Django Projekte überprüft.
+
+\section{Klassierung}
+    
+\begin{itemize}
+    \item Prozessautomatisierung 
+    \item UNIX / Linux
+    \item Python / Ruby
+\end{itemize}
+    
+\section{Durchführungsblock}
+Startblock 10: 16.04.2012 - 20.04.2012\\
+IPA-Durchführung: 30.04.2012 - 16.05.2012\\
+Einreichung bis: Montag, 16.03.2012\\
+    
+\section{Ausgangslage}
+Bei allink besteht seit Mitte 2010 ein Entwicklungs- und Deployment-Prozess welcher sich in den letzten eineinhalb Jahren etabliert hat. Die Entwickler sparen sich dadurch pro Projekt einige Stunden Arbeit und die Projekte sind zudem auch nach längere Zeit noch wartbar. Dank der Abhängigkeitsdefinitionen pro Projekt, können Entwickler schnell in einem anderem Projekt einsteigen oder in einem alten Projekt Fehlerkorrekturen vornehmen. Seit einem halben Jahr wird zudem die Codequalität mit Hilfe von einer automatischen Überprüfung der Codekonvention auf den Rechnern der Entwickler erhöht.
+
+Trotz all diesen Massnahmen ist es möglich, dass Entwickler ein Projekt unabsichtlich verunreinigen. Im Extremfall führt dies dazu, dass das Projekt bei einem anderen Entwickler oder sogar in der Produktion nicht mehr lauffähig ist.
+
+Mit dieser Arbeit soll ein System zur automatischen Kontrolle der erwähnten Faktoren erstellt werden.
+
+\section{Detaillierte Aufgabenstellung}
+Es soll eine Software in Python erstellt werden, welche kontinuierlich die Qualität von einer konfigurierbaren Menge Django Projekte überprüft. Dazu sollen die Projekte jeweils täglich aus dem Versionierungssystem geklont, Projektspezifische Abhängigkeiten installiert und nach gewissen Anforderungen getestet und abschliessend ein projektübergreifender Report per E-Mail versendet werden.
+
+Diese Anforderungen sind:
+
+- Installierbarkeit der projektspezifischen Abhängigkeiten
+Erklärung: Jedes Projekt hat projektspezifische Abhängigkeiten, welche sich über ein Packetmanagement installieren lassen. Bei dieser Anforderung soll pro Projekt geprüft werden, ob diese Abhängigkeitsliste komplett und korrekt ist.
+
+- Codekonventionen nach PEP8
+Erklärung: Im ''Python Enhancement Proposal 8'' sind die grundlegenden Stil-Richtlinien für Python-Quellcode definiert. Bei dieser Anforderung soll pro Projekt geprüft werden, dass diese Stil-Richtlinien eingehalten wurden.
+
+- Überprüfung der Syntax
+Erklärung: Überprüft werden sollen sämtliche Python und Javascript Files z.B. mit pyflakes und jshint.
+
+- Initialisierung der Datenbank
+
+- Durchführen sämtlicher Datenbankmigrations-Files
+
+- UnitTests
+
+Treten bei den Tests Fehler auf, soll dies in einem E-Mail festgehalten und an eine Sammeladresse gesendet werden.
+
+Eine weitere Anforderung an die Software ist, dass die einzelnen Überprüfungen der Anforderungen Modular aufgebaut sind und so in Zukunft weitere Anforderungen hinzugefügt werden können. Zudem kommt hinzu, dass die neu zu schreibende Applikation mit dem Versionsverwaltungssystem git verwaltet werden soll. Dabei sollen zwei Branches geführt werden: ''develop'' und ''master''. Wobei der ''master'' immer den Stand der Produktion widerspiegelt und im ''develop'' weiterentwickelt wird.
+
+Es sollen wo möglich bestehende Tools zur Überprüfung der oben genannten Anforderungen verwendet werden. Dies bedeutet für den Lernenden, dass er überwiegend die Software zum Koordinieren und zusammenführen der einzelnen Tests schreiben muss.
+
+Nicht Bestandteil dieser Arbeit sind:
+
+- VirtualMachine zur Entwicklung
+- Bereitstellung des Zielsystems
+- Einpflegen aller Projekte
+
+Nebst der begleitenden IPA Dokumentation wird keine zusätzliche Dokumentation gefordert.
+
+\section{Mittel und Methoden}
+Folgende Technologien sind zwingend zu verwenden:
+
+\begin{itemize}
+    \item  Python 2.x
+    \item  Django
+\end{itemize}
+
+Der Lernende muss sich zudem während der Entwicklung an die Firmenstandards halten, welche im IT Wiki zugänglich sind.
+    
+\section{Vorkenntnisse}
+Dem Lernenden sind alle genannten Technologien bereits bekannt. Seit Beginn seines Praktikums im Mai 2010 setzt er sich damit auseinander.
+    
+\section{Vorarbeiten}
+Die Testumgebung wird als VirtualMachine Image mit einem unserem Produktivsystem am nächsten kommenden System bespielt und dem Lernenden zur Verfügung gestellt.    
+
+\section{Neue Lerninhalte}
+Wie erwähnt sind dem Lernenden alle Technologien bereits bekannt. Das Know-how ist zudem bei allink ausreichend vorhanden. 
+
+\section{Arbeiten in den letzten 6 Monaten}
+Der Lernende hat diverse Webseiten mit den oben genannten Technologien umgesetzt.

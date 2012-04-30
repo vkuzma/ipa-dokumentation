@@ -1,0 +1,37 @@
+%!TEX root = ../dokumentation.tex
+\section{Analyse des Ist-Zustands}
+Momentan werden unsere Djangoprojekte beim commiten (versionieren mit hilfen von git) mit sognennten ''pre-commit hooks'' analysiert. 
+Dabei wird der Quellcode auf diverse Aspekte überprüft. Bei nicht bestehender Überprüfung wird eine Meldung ausgegeben.\\
+Diese Methode hat bisher die Fehlerquate um einiges verringert. Es ist jedoch immer noch möglich einen Fehler in die Produktion einzuspielen.  
+Folgende Fehlerfälle können trotz pre-commit hooks eintreffen. 
+\begin{itemize}
+    \item Man commited direkt über Github.
+    \item 
+\end{itemize}
+Derzeitig wird der Quellcode nach folgenden Zeichenkette überprüft:
+\begin{itemize}
+    \item ''import pdb'' - *.py: 
+        pdb ist der Python Debugger. Aus Sicherheitsgründen darf dieser nicht in der Produktion verwendet werden.
+    \item ''import ipdb'' - *.py:
+        Gleiche Begründung wie ''import pdb''.
+    \item ''print'' - *.py:
+        Konsolenausgabe sind in der Produktion unerwünscht.
+    \item ''console.log'' - *.js:
+        Konsolenausgabe sind in der Produktion unerwünscht.
+\end{itemize}
+
+
+
+
+\section{Präzisierung der Aufgabenstellung}
+
+
+\subsection{Funktionsumfang}
+\begin{itemize}
+    \item Alle Berichte werden in eine Logdatei geschrieben. 
+    \item Alle Berichte werden per Mail ein eine vorgegebene Email-Adresse versendet. 
+\end{itemize}
+
+\section{Definition Ziele}
+In einer Sitzung mit der Projektleitung wurde der IST-Zustand besprochen und die Ziele definiert.
+\clearpage

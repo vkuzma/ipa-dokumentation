@@ -1,0 +1,22 @@
+%!TEX root = ../dokumentation.tex
+\section{Analyse der Aufgabenstellung}
+Die Aufgabenstellung ist im Kapitel 1 detailiert beschrieben. \\
+Anhand der Aufgabenstellung lässt sich eine Liste des Funktionsumfangs erstellen:
+\begin{itemize}
+    \item Das Script soll täglich mittels Cronjob ausgelöst werden.
+    \item Klonen eines Projekt aus GitHub. 
+    \item Erstellen einer virtuellen Umgebung mittels virtualenvwrapper.
+    \item Installieren des Projekts und deren Abhängigkeiten.
+    \item Löschen des überprüften Projekt aus der lokalen Umgebung.
+\end{itemize}
+
+
+\section{Prüfungskriterie}
+Folgende Kriterien müssen erfüllt sein, damit ein Djangoprojekt erfolgreich validiert wird:
+\begin{itemize}
+    \item Codeüberprüfung durch pep8 - *.py
+    \item Codeüberprüfung durch pyflakes - *.py
+    \item Codeüberprüfung durch jshint - *.js
+    \item Alle Berichte werden in eine Logdatei geschrieben. 
+    \item Alle Berichte werden per Mail ein eine vorgegebene Email-Adresse versendet. 
+\end{itemize}

@@ -1,22 +1,48 @@
 %!TEX root = ../dokumentation.tex
-\section{Analyse der Aufgabenstellung}
+\section{Funktionsumfang}
 Die Aufgabenstellung ist im Kapitel 1 detailiert beschrieben. \\
-Anhand der Aufgabenstellung lässt sich eine Liste des Funktionsumfangs erstellen:
+Es wurde eine Liste mit Funktionen erstellt, die für das erreichen des Projektziel notwendig sind.
 \begin{itemize}
     \item Das Script soll täglich mittels Cronjob ausgelöst werden.
     \item Klonen eines Projekt aus GitHub. 
     \item Erstellen einer virtuellen Umgebung mittels virtualenvwrapper.
     \item Installieren des Projekts und deren Abhängigkeiten.
-    \item Löschen des überprüften Projekt aus der lokalen Umgebung.
+    \item Aufsetzen einer mysql-Datenbank. 
+    \item Synchronisieren der Datenbank mit den Djangomodellen.
+    \item Ausführen der Datenbankmigrationen.
+    \item Überprüfung des Quellcodes anhand der vorgegebenen Validierungskriterien (siehe Abschnitt Validierungskriterien).
+    \item Starten der Djangoapplikation
+    \item Alle Berichte werden in eine Logdatei geschrieben. 
+    \item Senden eines Berichts als Email an eine vordefinierte Adresse.
+    \item Entfernen der Datenbank aus der lokalen Umgebung.
+    \item Entfernen des überprüften Projekt und der virtuellen Umgebung aus der lokalen Umgebung.
 \end{itemize}
 
 
-\section{Prüfungskriterie}
+\section{Validierungskriterien}
 Folgende Kriterien müssen erfüllt sein, damit ein Djangoprojekt erfolgreich validiert wird:
 \begin{itemize}
     \item Codeüberprüfung durch pep8 - *.py
     \item Codeüberprüfung durch pyflakes - *.py
-    \item Codeüberprüfung durch jshint - *.js
-    \item Alle Berichte werden in eine Logdatei geschrieben. 
-    \item Alle Berichte werden per Mail ein eine vorgegebene Email-Adresse versendet. 
+    \item Codeüberprüfung durch jshint - *.
+    \item Der Code darf die folgenden Zeichenfolgen nicht enthalten: ''console.log'', ''debugger'' - *.js
+    \item Der Code darf die folgenden Zeichenfolgen nicht enthalten: ''print'', ''import pdb'', ''import ipdb'' - *.py
 \end{itemize}
+
+\section{Kriterien für die Erweiterbarkeit}
+Damit das Script auch bequem erweitert werden kann, muss auf ein paar Dinge besonds geachted werden. \\
+Darunter gehören eine modulare Aufteilung der einzelnen Prüfungsprozesse und eine Kapselung des Basiscodes. \\
+Mit Einhaltung folgender Kriterien sollte das möglich sein:
+\begin{itemize}
+    \item Die Prüfungsscripts sind in einem separatem Order gespeichert.
+    \item Der Bezug auf die Prüfungsscripts wird nur in einer Datei gehalten. 
+    \item Das Layout für den Bericht, der über Email versendet wird, wird in einer separaten Datei gehalten.
+    \item Der Prüfungsbericht soll so gestaltet sein, dass die Resultate auch bei sehr vielen Projekten oder sehr vielen Prüfungsprozessen noch überschauber ist.
+\end{itemize}
+
+\clearpage
+\section{der Prüfungsberichts}
+Der Prüfungsbericht wird nach Abschluss der Überprüfung aller Projekte als Email versendet. Im Bericht sollen alle Diagnosen der Projekte aufgezählt sein.
+Die Herausforderung dabei ist es, den Bericht so zu gestalten, dass er auch bei mehreren Projekte oder Prüfungsprozessen noch übersichtlich bleibt. 
+
+

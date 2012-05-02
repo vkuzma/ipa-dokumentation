@@ -2,11 +2,12 @@
 \section{Analyse des Ist-Zustands}
 Momentan werden unsere Djangoprojekte beim commiten (versionieren mit hilfen von git) mit sognennten ''pre-commit hooks'' analysiert. 
 Dabei wird der Quellcode auf diverse Aspekte überprüft. Bei nicht bestehender Überprüfung wird eine Meldung ausgegeben.\\
-Diese Methode hat bisher die Fehlerquate um einiges verringert. Es ist jedoch immer noch möglich einen Fehler in die Produktion einzuspielen.  
-Folgende Fehlerfälle können trotz pre-commit hooks eintreffen. 
+Diese Methode hat bisher die Fehlerquate um einiges verringert. Es ist jedoch immer noch möglich einen Fehler in die Produktion einzuspielen. \\  
+Folgende Ursachen können trotz pre-commit hooks einen Fehler auslösen. 
 \begin{itemize}
     \item Man commited direkt über Github.
     \item Das requirements.txt für pip ist nicht vollständig.
+    \item Programmierfehler, die nicht die Syntax betreffen. 
 \end{itemize}
 Derzeitig wird der Quellcode nach folgenden Zeichenkette überprüft:
 \begin{itemize}
@@ -19,7 +20,7 @@ Derzeitig wird der Quellcode nach folgenden Zeichenkette überprüft:
     \item ''console.log'' - *.js:
         Konsolenausgabe sind in der Produktion unerwünscht.
     \item ''debugger'' - *.js:
-        Das Keyword debugger ist mir im Javascript nicht bekannt.
+        Das Keyword ''debugger'' wird benötigt um Breakpoints zu setzen. Diese sind in der Produktion nicht erwünscht.
     \item 
 \end{itemize}
 Derzeitig wird der Quellcode mit folgenden tools überprüft:
@@ -30,8 +31,6 @@ Derzeitig wird der Quellcode mit folgenden tools überprüft:
         pyflakes überprüft den Quellcode nach potenziellen Fehlern.
     \item pep8 - *.py:
         pep8 ist ein Tool welches den Quellcode auf das Einhalten des pep8 Standards überprüft.
-    \item sass - *.scss:
-       sass ist eine Erweiterung von CSS3. Sass wir von uns nicht mehr verwendet. Diese üperprüfung ist somit nicht nötig. 
 \end{itemize}
 
 \subsection{Fehlererkennung}
@@ -41,4 +40,14 @@ Fehler, die durch Serverprobleme verursacht werden, werden nicht speziel abgefan
 
 \section{Gewünschter Soll-Zustand}
 Die Probleme, die mit der jetztigen Qualitätssicherung auftreten sollen so weit wie möglich verhindert werden. Die meist auftretenden Fehler sollen weit weg vom Kunden entdeckt werden. Das heisst die Überprüfung müsste automatisiert und ständig auf einem externen System laufen.
+
+\section{Ziele}
+Für das erfolgreiche Abschliessen des Projekts müssen folgende Ziele erfüllt sein:
+\begin{itemize}
+    \item Es wird täglich sichergestellt, dass der Pythoncode einer definierten Anzahl von Kriterien enspricht. 
+          Darunter gehören sowohl Syntax wie auch Codedarstellung.
+    \item Es wird täglich sichergestellt, dass jedes Projekt sammt Abhängikeiten ordnungsgemäss installiert und wieder deinstalliert werden kann.
+    \item Man kann ohne Änderungen am Basecode weiter Prüfungsanwendunge dem Script hinzufügen. 
+    \item Es kann eine belibige Anzahl von Projekte überprüft werden.
+\end{itemize}
 \clearpage

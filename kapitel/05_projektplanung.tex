@@ -41,8 +41,22 @@ Mit Einhaltung folgender Kriterien sollte das möglich sein:
 \end{itemize}
 
 \clearpage
-\section{der Prüfungsberichts}
+\section{Prüfungsbericht}
 Der Prüfungsbericht wird nach Abschluss der Überprüfung aller Projekte als Email versendet. Im Bericht sollen alle Diagnosen der Projekte aufgezählt sein.
-Die Herausforderung dabei ist es, den Bericht so zu gestalten, dass er auch bei mehreren Projekte oder Prüfungsprozessen noch übersichtlich bleibt. 
+Der Bericht wird in eine Gesamtsübersicht und in einer Detailübersicht aufgeteilt. Die Gesamtübersicht wird immer angezeigt und stellt alle Projekte und eine grobe Erfolgsanzeige in einer Tabelle dar. \\
+Die Detailanzeige wird nur dan angezeigt, wenn bei der Überprüfung eines Projekts Mängel auftauchen. Jedes Projekt, dass die Überprüfung nicht erfolgreich abgeschlossen hat, bekommt seine eingen Detailansicht.
+In der Detailansicht wird jediglich darauf hingewiesen, welcher Prüfungsprozess einen Fehler zurückgibt. Die originale Fehlermeldung wird nicht angezeigt. 
 
+\section{Modulstruktur des Scripts}
+Wie bereits in dem Abschnit ''Kriterien für die Erweiterbarkeit'' erwähnt, soll das Script mit Prüfungsprozessen erweiterbar sein ohne den Basiscode zu verändern. Im folgenden Abschnitt wird genauer auf die Aufteilung der einzelnen Module eingegangen. \\
+
+\section{Scriptablauf}
+\subsection{Abarbeitung der Djangoprojekt}
+Es werden alles Djangoprojekt nacheinander überprüft. Am schluss wird der Bericht per Mail versendet.
+Im nachfolgendem Flussdiagramm ist ersichtlich, wie die Projekte nacheinander abgearbeited werden: \\
+
+\subsection{Arbeitsablauf der Testcases in einem Djangoprojekt}
+Die Testcases werden nacheinander geladen und aufgerufen. Nach jedem abgeschlossenen Testcase wird das entsprechnde Resultat für die Auswertung zwischengespeichert. 
+Die Überprüfung eines Djangoprojekts ist abgeschlossen, wenn alle Testfälle durchgelaufen sind oder ein Testfall gescheitert ist, welcher als erfolgsabhängig eingestuft wurde. 
+Im nachfolgendem Flussdiagramm ist ersichtlich, wie die Testcases in einem Projekt nacheinander abgearbeited werden: \\ 
 

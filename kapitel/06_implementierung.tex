@@ -1,0 +1,19 @@
+\section{Funktionalität des Scripts}
+\subsection{Testcases auswählen}
+Man kann für jedes Projekt entweder eine Liste der Testfälle erstellen, die ausgeführt werden sollen oder eine Liste der Testfälle, die nicht ausgeführt werden sollen.
+So kann man für jedes Projekt die Testfälle individuell zusammenstellen.
+
+\subsection{Fehler}
+Jede Funktion im Script wird auf Fehler überprüft. Das Script sollte unter keinen Umständen zum absturz kommen. 
+Im Fehlerfall werden die restlichen Testfälle übersprungen und der Bericht wird noch erstellt und versendet. \\
+Jeder Testfall hat 2 Fehler, die geworfen werden können: 
+\begin{itemize}
+    \item CriticalError - kritischer Fehler, führt dazu dass die restlichen Testfälle einer Djangoapplikation ausgelassen werden, wird im Report rot dargestellt 
+    \item NonCriticalError - nicht kritischeer Fehler, der Fehler wird zwar vermekrt, fürt aber nicht zum Abbruch, die restlichen Testfälle werden weiterhin ausgeführt, wird im Report orange dargestellt
+\end{itemize}
+
+\section{Bezogene Infomrationsquellen}
+Währen der Implementation war ich auf Informationen im Web angewiesen. Alle Informationen, die ich bennötige, konnte ich von der officiellen Pythonreferenz entnehmen. 
+Anbei ist eine Auflistung des Themas und der dazugehörigen Quelle, die ich für das Projekt benötigte:
+
+

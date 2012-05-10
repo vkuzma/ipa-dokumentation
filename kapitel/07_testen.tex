@@ -1,0 +1,42 @@
+
+\section{Testumgebung}
+Das System, auf dem das Script getestet wird ist ein Mac OS X 10.7.3
+Die Tests werden mit Python 2.7 ausgeführt.
+
+\section{Testfälle für den Test}
+Für den Test werden ein paar Dummytestfälle erstellt, die folgende Fehler werfen sollen:
+\begin{itemize}
+    \item CriticalError
+    \item NonCriticalError 
+    \item kein Fehler 
+\end{itemize}
+
+\section{Testen der Testfälle}
+Da die Testfälle voneinander stark varieren, werden nur die im Abschnitt ''Testfälle für den Test'' erwähnten Testfälle in den Test einbezogen. Die restlichen Testfälls sind teilweise von externen tools oder von einer Internetverbindung abhängig. Das Resultat dieser Testfälle ist stark abhängig von dem Resultat der jeweiligen externen Applikaiton, welche im Testfall verwendet wird. Deshalb macht es mehr Sinn diese Testfälle nicht im Test auszulassen, weil man auf diese Weise mehrheitlich die externe Applikaiton testetn würde anstatt des Scripts.  
+
+\section{Testablauf}
+Beim Testen wird vor allem darauf geachtet, dass das Hauptscript funktioniert. Die einzelnen Testfälle sind sommit zweitrangig, da diese zu stark von einander varrieren. Ohne Testfälle kan aber das Hauptscript nicht überprüft werden. Desswegen werden die wichtigsten Testfälle mit in den Test genommen.
+Es werden Testscenarien ausgesucht um die wichtigsten Features des Scripts zu überprüfen.
+Der Test soll automatisiert ablaufen. Nach dem manuellen ausführen der Testapplikation, werden alle Testfälle nacheinander abgearbeitet. In der Konsolenausgabe wird dan mitgeteilt ob der Test erflogreich abgearbeitet werden konnte. Bei nichtbestehen des Tests wird auf den gescheiterten Testfall hingewiesen.  
+
+\subsection{Testscenarien}
+Es wurden realitätsbezogenen Scenarien ausgesucht. 
+Folgende Testscenarien werden im Test behandelt:
+\begin{enumerate}
+    \item alle Testfälle sind erfolgreich 
+    \item ein Testfall wirft einen kritischen Fehler zurück
+    \item ein Testfall wirft einen nicht kritischen Fehler zurück
+    \item ein Testfall wird ingonriert (exclude)
+    \item es werden alles Testfälle zugelassen ausser einer (allowed\_test\_cases) 
+\end{enumerate}
+
+\section{Testkriterien}
+Beim Testen werden folgende Kriterien getestet:
+\begin{itemize}
+    \item eine Djangoapplikation kann aus einem git Repository geklont werden
+    \item es kann eine virtuelle Umgebung wird für die Djangoapplikation erstellt werden
+    \item die Djangoapplikation kann sammt virtueller Umgebung wieder entfernt werden
+\end{itemize}
+
+\section{Testen des Reports}
+Für den Report wird ein Testfall zusammengestellt, der kritische, wie auch nichtkritische Fehler darstellt, ingorierte Testfälle und ausgelassene Testfälle(ausgelassen wegen eines kritischen Fehlers) anzeigt.

@@ -1,9 +1,12 @@
+\section{Zwischentests}
+Während das Script Implementiert wird, wird das ''allink-project'' als Testproject verwendet. Das ''allink-project'' ist das Standardtemplate für unsere Djangoprojekte. Die akutelle Version des Projekts ist unter dem Commit: 
+
 \section{Funktionalität des Scripts}
 \subsection{Testcases auswählen}
 Man kann für jedes Projekt entweder eine Liste der Testfälle erstellen, die ausgeführt werden sollen oder eine Liste der Testfälle, die nicht ausgeführt werden sollen.
 So kann man für jedes Projekt die Testfälle individuell zusammenstellen.
 
-\subsection{Fehler}
+\section{Fehlerbehandlung}
 Jede Funktion im Script wird auf Fehler überprüft. Das Script sollte unter keinen Umständen zum absturz kommen. 
 Im Fehlerfall werden die restlichen Testfälle übersprungen und der Bericht wird noch erstellt und versendet. \\
 Jeder Testfall hat 2 Fehler, die geworfen werden können: 
@@ -12,8 +15,21 @@ Jeder Testfall hat 2 Fehler, die geworfen werden können:
     \item NonCriticalError - nicht kritischeer Fehler, der Fehler wird zwar vermekrt, fürt aber nicht zum Abbruch, die restlichen Testfälle werden weiterhin ausgeführt, wird im Report orange dargestellt
 \end{itemize}
 
-\section{Bezogene Infomrationsquellen}
-Währen der Implementation war ich auf Informationen im Web angewiesen. Alle Informationen, die ich bennötige, konnte ich von der officiellen Pythonreferenz entnehmen. 
-Anbei ist eine Auflistung des Themas und der dazugehörigen Quelle, die ich für das Projekt benötigte:
+\section{E-Mail versenden}
+Das versenden von Emails ist mit der in Python integrierten Funktionalität gelöst worden. \\
+Quelle der Informationen: \\ 
+http://docs.python.org/library/smtplib.html \\
+http://docs.python.org/library/email-examples.html \\
 
+\section{Logging}
+Ausser des Report, welcher per E-Mail versendet wird, werden auch Fehlermeldungen in eine Logdatei geschrieben. Die Logdateien befinden sich im Ordner ''logs''. Jede Projekt hat seine eigene Logdatei. Die Logs werden an den Dateien angehängt. Die Logs werden nich gelöscht. Man muss sie also bei bedarf manuell löschen. \\
+Das Loggen wurde mit einer integrierten Funktionalität von Python gelöst. \\
+Quelle der Informationen: \\
+http://docs.python.org/library/logging.html
+http://docs.python.org/howto/logging.html\#logging-basic-tutorial \\
+
+\section{Subprozesse ausführen}
+Externe Anwendungen werden als Subprozess im Script ausgeführt. Der Rückgabewert des Subprozesses wird überprüft und dementsprechend eine eigens definierter Fehlertext im Report ausgegeben.
+Quelle der Informationen: \\
+http://docs.python.org/library/subprocess.html
 

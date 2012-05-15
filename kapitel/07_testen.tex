@@ -39,4 +39,28 @@ Beim Testen werden folgende Kriterien getestet:
 \end{itemize}
 
 \section{Testen des Reports}
-Für den Report wird ein Testfall zusammengestellt, der kritische, wie auch nichtkritische Fehler darstellt, ingorierte Testfälle und ausgelassene Testfälle(ausgelassen wegen eines kritischen Fehlers) anzeigt.
+Für den Report wird ein Testfall zusammengestellt, der kritische, wie auch nichtkritische Fehler darstellt, ingorierte Testfälle und ausgelassene Testfälle (ausgelassen wegen eines kritischen Fehlers) werden grau dargestellt. 
+ Der Report muss auf mail.google.com angeschaut werden. Den es ist nicht vergleichbar wenn man eine HTML-Seite anschaut oder ein HTML-Mail in einer Mailapplikation betrachtet. HTML-Mails sind was Styling angeht, eingeschränkt. 
+
+\clearpage
+\subsection{Testvorgehen }
+In diesem Scenario wird jeder Testfall erfolgreich abgeschlossen.
+Handlung: \\
+test\_report\_success.py ausführen \\
+Reaktion: \\
+Script wird ausgeführt und automatisch beendet, es wurde eine mail an kuzma@allink.ch versendet.\
+Das E-Mail wird mit einem im Excel erstellten Report verglichen. Der Excelreport stellt das erwartete Ergebnis dar. 
+
+
+\subsection{Testen der Testfälle}
+Der Erfolg der Testfälle hängt stark von äusseren Faktoren ab. Mit den Unittest und dem Test des Report kann man zumindest ausgehen das Die Basislogik des Scripts funktioniert. 
+Befor aber ein Testfall in die Produktion eingespielt wird, werden noch ein paar Projekte mit dem Testscript überprüft. Dafür wählt man Projekte, die man kennt oder sogar daran gearbeitet hat. 
+Für den folgenden Test werden 3 von mir bekannte Projekte mit dem Script überprüft:
+\begin{itemize}
+    \item test-projekt: Das standard Template für unsere Djangoprojekte. Commit zum Zeitpunkt des Tests: 5116d7ea67746dbd109954206be839be8af4d833 
+    \item zumsteg: Commit zum Zeitpunkt des Tests: aa873796518a14761599b364c147436762cc1fa1  
+    \item looksswiss: Commit zum Zeitpunkt des Tests: 79be790bcdf2b289a6a6f51ec33259d587373010 
+\end{itemize}
+ 
+Anbei sind die Reports der 3 Projekte abgebildet:
+

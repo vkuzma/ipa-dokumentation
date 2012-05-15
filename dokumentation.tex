@@ -34,6 +34,7 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
 \usepackage[T1]{fontenc}
 \usepackage{hyphenat}
 \usepackage{ae} % Schöne Schriften für PDF-Dateien
+\usepackage{lscape}
 
 % Tradmark
 \def\TTra{\textsuperscript{\texttrademark}}
@@ -185,7 +186,9 @@ bibliography=totocnumbered % Lit.zeichnis in Inhaltsverzeichnis aufnehmen
          \chapter{Analyse}
             \input{./kapitel/04_analyse.tex}
         \chapter{Terminplanung}
+            \begin{landscape}
             \input{./kapitel/03_terminplanung.tex}
+            \end{landscape}
         \chapter{Funktionsumfang}
             \input{./kapitel/05_projektplanung.tex}
         \chapter{Implementierung}

@@ -69,8 +69,8 @@
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{157.5, 442.59229}</string>
-				<string>{157.5, 485.99994}</string>
+				<string>{175.5, 442.59229}</string>
+				<string>{175.5, 485.99994}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -112,8 +112,8 @@
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{157.5, 363.29999}</string>
-				<string>{157.5, 406.59229}</string>
+				<string>{175.5, 363.29999}</string>
+				<string>{175.5, 406.59229}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -137,7 +137,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{99, 406.59229}, {117, 36}}</string>
+			<string>{{117, 406.59229}, {117, 36}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -184,7 +184,7 @@
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{225.00003, 261.29993}</string>
+				<string>{242.99997, 261.29993}</string>
 				<string>{279, 666}</string>
 			</array>
 			<key>Style</key>
@@ -231,8 +231,8 @@
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{448.20001, 514.79999}</string>
-				<string>{216, 183.29999}</string>
+				<string>{466.20001, 514.79999}</string>
+				<string>{234, 183.29999}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -274,10 +274,10 @@
 			<real>19.25</real>
 			<key>Points</key>
 			<array>
-				<string>{157.5, 543.59998}</string>
-				<string>{117, 594}</string>
-				<string>{36, 549}</string>
-				<string>{99, 183.29999}</string>
+				<string>{175.5, 543.59998}</string>
+				<string>{135, 594}</string>
+				<string>{63, 549}</string>
+				<string>{117, 183.29999}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -319,8 +319,8 @@
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{225.00003, 514.79993}</string>
-				<string>{314.99997, 514.79999}</string>
+				<string>{243.00011, 514.79993}</string>
+				<string>{333, 514.79999}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -347,7 +347,7 @@
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{160.12595, 542.69995}, {20.995726, 21}}</string>
+					<string>{{178.12595, 542.69995}, {20.995726, 21}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -401,7 +401,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{218.20853, 514.19995}, {30.443798, 21}}</string>
+					<string>{{236.20853, 514.19995}, {30.443798, 21}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -455,7 +455,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{90, 485.99994}, {135, 57.600002}}</string>
+					<string>{{108, 485.99994}, {135, 57.600002}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
@@ -508,8 +508,8 @@
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{157.5, 290.09991}</string>
-				<string>{157.5, 327.29999}</string>
+				<string>{175.5, 290.09991}</string>
+				<string>{175.5, 327.29999}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -533,7 +533,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{99, 327.29999}, {117, 36}}</string>
+			<string>{{117, 327.29999}, {117, 36}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -597,8 +597,8 @@ Testcase ausf\'fchren}</string>
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{157.5, 201.29999}</string>
-				<string>{157.5, 232.49989}</string>
+				<string>{175.5, 201.29999}</string>
+				<string>{175.5, 232.49992}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -627,7 +627,7 @@ Testcase ausf\'fchren}</string>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{160.12595, 288.29999}, {20.995726, 21}}</string>
+					<string>{{178.12595, 288.29999}, {20.995726, 21}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -681,7 +681,7 @@ Testcase ausf\'fchren}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{218.20853, 259.79993}, {30.443798, 21}}</string>
+					<string>{{236.20853, 259.79993}, {30.443798, 21}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -735,7 +735,7 @@ Testcase ausf\'fchren}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{90, 232.49992}, {135, 57.600002}}</string>
+					<string>{{108, 232.49992}, {135, 57.600002}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
@@ -775,7 +775,7 @@ Testcase ausf\'fchren}</string>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{378, 540}, {25.323225, 29.585594}}</string>
+					<string>{{396, 540}, {25.323225, 29.585594}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -825,7 +825,7 @@ Testcase ausf\'fchren}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{440.28134, 513}, {36.71867, 29.585594}}</string>
+					<string>{{458.28134, 513}, {36.71867, 29.585594}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -875,7 +875,7 @@ Testcase ausf\'fchren}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{315, 486}, {133.2, 57.600002}}</string>
+					<string>{{333, 486}, {133.2, 57.600002}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -944,7 +944,7 @@ Ist Testcase erfolgsabh\'e4ngig?}</string>
 			<key>Points</key>
 			<array>
 				<string>{279, 81}</string>
-				<string>{157.5, 165.29999}</string>
+				<string>{175.5, 165.29999}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -968,7 +968,7 @@ Ist Testcase erfolgsabh\'e4ngig?}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{99, 165.29999}, {117, 36}}</string>
+			<string>{{117, 165.29999}, {117, 36}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1125,7 +1125,7 @@ Testcase holen}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2012-05-03 11:39:52 +0000</string>
+	<string>2012-05-11 14:18:15 +0000</string>
 	<key>Modifier</key>
 	<string>Vladimir Kuzma</string>
 	<key>NotesVisible</key>
